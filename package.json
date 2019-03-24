@@ -1,31 +1,30 @@
 {
-  "name": "websockets-playlist",
+  "name": "node-chat-app",
   "version": "1.0.0",
-  "description": "A chat app using WebSockets",
-  "main": "server.js",
+  "description": "A simple node chat app to train with socket.io",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
+  "author": "angristan",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Anu1601CS/quick-chat.git"
+    "url": "https://github.com/Angristan/node-chat-app.git"
   },
-  "author": "Anurag Kumar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Anu1601CS/quick-chat/issues"
-  },
-  "homepage": "https://github.com/Anu1601CS/quick-chat/#readme",
   "dependencies": {
-    "express": "^4.15.2",
-    "public-ip": "^3.0.0",
-    "socket.io": "^1.7.3"
+    "expect": "^1.20.2",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "socket.io": "^2.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
-  },
-  "keywords": [
-    "Quick",
-    "Chat"
-  ]
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "nodemon": "^1.18.3"
+  }
 }
